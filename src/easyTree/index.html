@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>Insert title here</title>
+<link href="./css/stylesheets/jquery.tooltip/jquery.tooltip.css"
+	rel="stylesheet"></link>
+<link href="./css/easytree.css"
+	rel="stylesheet"></link>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.tooltip.min.js"></script>
+<script type="text/javascript" src="js/easytree.js"></script>
+<script type="text/javascript">
+	var tree = [ {
+		text : '节点1',
+		tooltipTitle : '这是标题',
+		tooltip : '这是内容',
+		isError : false,
+		leftLine : "red",
+		rightLine : "blue",
+		children : [ {
+			text : '节点1.1',
+			tooltipTitle : '这是标题',
+			tooltip : '这是内容',
+			isError : false,
+			leftLine : "red",
+			rightLine : "blue",
+		}, {
+			text : '节点1.2',
+			tooltipTitle : '这是标题',
+			tooltip : '这是内容',
+			isError : false,
+			leftLine : "red",
+			rightLine : "blue",
+			children : [ {
+				text : '节点1.2.1',
+				tooltipTitle : '这是标题',
+				tooltip : '这是内容',
+				isError : false,
+				leftLine : "red",
+				rightLine : "blue",
+				children : [ {
+					text : '节点1.2.1.1',
+					tooltipTitle : '这是标题',
+					tooltip : '这是内容',
+					isError : false,
+					leftLine : "red",
+					rightLine : "blue",
+				} ]
+			}, {
+				text : '节点1.2.2',
+				tooltipTitle : '这是标题',
+				tooltip : '这是内容',
+				isError : false,
+				leftLine : "red",
+				rightLine : "blue",
+			} ]
+		}, {
+			text : '节点1.3',
+			tooltipTitle : '这是标题',
+			tooltip : '这是内容',
+			isError : true,
+			leftLine : "red",
+			rightLine : "blue",
+			children : [ {
+				text : '节点1.3.1',
+				tooltipTitle : '这是标题',
+				tooltip : '这是内容',
+				isError : false,
+				leftLine : "blue",
+				rightLine : "blue",
+				children : []
+			} ]
+		} ]
+	} ];
+
+	$(document).ready(function() {
+		easyTree.init(tree);
+	});
+</script>
+</head>
+<body>
+	<div id="easyTree"></div>
+</body>
+</html>
